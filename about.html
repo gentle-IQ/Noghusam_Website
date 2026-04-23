@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Noghusam Tech Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo.jpeg" alt="Noghusam Logo">
+    Noghusam<span>.</span>
+  </a>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+    <span class="theme-toggle-track" aria-hidden="true">
+      <span class="theme-toggle-icon theme-toggle-icon-moon">☾</span>
+      <span class="theme-toggle-icon theme-toggle-icon-sun">☀</span>
+      <span class="theme-toggle-thumb"></span>
+    </span>
+    <span class="sr-only theme-toggle-state">Dark mode</span>
+  </button>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <ul class="nav-links" id="navMenu">
+    <li><a href="about.html">About</a></li>
+    <li><a href="staff.html">Our Staff</a></li>
+    <li><a href="inventions.html">Our Inventions</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="goals.html">Our Goals</a></li>
+    <li><a href="why-us.html">Why Us</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <div class="section-tag">Who We Are</div>
+      <h2 class="section-title">Built on Steel.<br>Driven by Craft.</h2>
+      <div class="divider"></div>
+      <p>Noghusam Tech Hub is a private metal fabrication and manufacturing company based in New Winneba, Ghana. Since 2012, we have been transforming raw metal into solutions that power farms, furnish offices, and inspire through art.</p>
+      <p>Our team of skilled fabrication professionals combines traditional craftsmanship with modern engineering techniques to deliver products that are durable, precise, and built to last.</p>
+      <p>From agricultural machinery that feeds communities to architectural sculptures that inspire, we are at the forefront of Ghana's fabrication industry.</p>
+    </div>
+    <div class="values-grid reveal">
+      <div class="value-card"><div class="value-icon"><img src="images/integrity.png" alt="Integrity icon"></div><div class="value-title">Integrity</div><div class="value-desc">Honest, professional business conduct in every engagement.</div></div>
+      <div class="value-card"><div class="value-icon"><img src="images/quality.png" alt="Quality icon"></div><div class="value-title">Quality</div><div class="value-desc">High standards in every product we manufacture.</div></div>
+      <div class="value-card"><div class="value-icon"><img src="images/innovation.png" alt="Innovation icon"></div><div class="value-title">Innovation</div><div class="value-desc">Creative designs and modern fabrication techniques.</div></div>
+      <div class="value-card"><div class="value-icon"><img src="images/safety.webp" alt="Safety icon"></div><div class="value-title">Safety</div><div class="value-desc">PPE, inspections, and safety-first workshop operations.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="vision">
+  <h2 class="sr-only">Vision and Mission</h2>
+  <div class="vision-grid">
+    <div class="reveal">
+      <div class="vm-label">Our Vision</div>
+      <div class="vm-title">Leading Africa in Metal Excellence</div>
+      <p class="vm-text">To become a leading metal fabrication and metal works company in Ghana and across Africa, recognized for quality workmanship, innovation, and reliability.</p>
+    </div>
+    <div class="reveal">
+      <div class="vm-label">Our Mission</div>
+      <div class="vm-title">Quality Through Skilled Craftsmanship</div>
+      <p class="vm-text">To deliver high-quality metal fabrication services and products through skilled craftsmanship, innovative designs, and efficient production methods while maintaining safety, quality, and customer satisfaction.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">Noghusam<span> Tech Hub</span></div>
+      <div class="footer-tagline">Metal Fabrication &amp; Engineering - New Winneba, Ghana</div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-nav-col">
+        <div class="footer-nav-label">Navigate</div>
+        <a href="about.html">About</a>
+        <a href="staff.html">Our Staff</a>
+        <a href="inventions.html">Our Inventions</a>
+        <a href="services.html">Services</a>
+        <a href="goals.html">Objectives</a>
+        <a href="why-us.html">Why Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-social-block">
+      <div class="footer-nav-label">Follow Us</div>
+      <div class="footer-social-links">
+        <a href="https://www.facebook.com/cwmcl" target="_blank" rel="noopener" class="social-link">Facebook</a>
+        <a href="https://instagram.com/noghusam_tech_hub" target="_blank" rel="noopener" class="social-link">Instagram</a>
+        <a href="https://tiktok.com/@noghusam_tech_hub" target="_blank" rel="noopener" class="social-link">TikTok</a>
+      </div>
+      <div class="footer-handle">@noghusam_tech_hub</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Noghusam Tech Hub. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

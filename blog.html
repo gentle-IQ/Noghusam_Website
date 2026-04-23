@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | Noghusam Tech Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="images/logo.jpeg" alt="Noghusam Logo">Noghusam<span>.</span></a>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme" aria-pressed="false"><span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-icon theme-toggle-icon-moon">☾</span><span class="theme-toggle-icon theme-toggle-icon-sun">☀</span><span class="theme-toggle-thumb"></span></span><span class="sr-only theme-toggle-state">Dark mode</span></button>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <ul class="nav-links" id="navMenu">
+    <li><a href="about.html">About</a></li><li><a href="staff.html">Our Staff</a></li><li><a href="inventions.html">Our Inventions</a></li><li><a href="services.html">Services</a></li><li><a href="goals.html">Our Goals</a></li><li><a href="why-us.html">Why Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+<section id="blog">
+  <div class="blog-wrap">
+    <div class="reveal">
+      <div class="section-tag">Latest Updates</div>
+      <h2 class="section-title">BLOG</h2>
+      <div class="divider"></div>
+      <p class="blog-intro">News, project highlights, workshop updates, and company announcements from Noghusam Tech Hub.</p>
+    </div>
+    <div class="blog-grid reveal">
+      <article class="blog-card"><div class="blog-meta">Company News • April 2026</div><h3 class="blog-title">Welcome to Our New Blog</h3><p class="blog-excerpt">This space will share our latest company news, milestones, and behind-the-scenes stories from the workshop.</p></article>
+      <article class="blog-card"><div class="blog-meta">Project Update • April 2026</div><h3 class="blog-title">Production Progress This Quarter</h3><p class="blog-excerpt">We are expanding production capacity and improving turnaround times across agricultural machinery and custom metal works.</p></article>
+      <article class="blog-card"><div class="blog-meta">Workshop Update • April 2026</div><h3 class="blog-title">Safety and Quality Improvements</h3><p class="blog-excerpt">New internal checks and workflow upgrades are helping us maintain consistent quality and safer workshop operations.</p></article>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-top"><div class="footer-brand"><div class="footer-logo">Noghusam<span> Tech Hub</span></div><div class="footer-tagline">Metal Fabrication &amp; Engineering - New Winneba, Ghana</div></div><div class="footer-nav"><div class="footer-nav-col"><div class="footer-nav-label">Navigate</div><a href="about.html">About</a><a href="staff.html">Our Staff</a><a href="inventions.html">Our Inventions</a><a href="services.html">Services</a><a href="goals.html">Objectives</a><a href="why-us.html">Why Us</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div></div><div class="footer-social-block"><div class="footer-nav-label">Follow Us</div><div class="footer-social-links"><a href="https://www.facebook.com/cwmcl" target="_blank" rel="noopener" class="social-link">Facebook</a><a href="https://instagram.com/noghusam_tech_hub" target="_blank" rel="noopener" class="social-link">Instagram</a><a href="https://tiktok.com/@noghusam_tech_hub" target="_blank" rel="noopener" class="social-link">TikTok</a></div><div class="footer-handle">@noghusam_tech_hub</div></div></div>
+  <div class="footer-bottom"><div class="footer-copy">© 2026 Noghusam Tech Hub. All rights reserved.</div></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

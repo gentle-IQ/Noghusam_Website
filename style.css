@@ -1042,12 +1042,22 @@ select option {
 select option:disabled {
   color: #666;
 }
+.contact-form .input-invalid {
+  border-color: #ff746c !important;
+  box-shadow: inset 0 0 0 1px #ff746c, 0 0 12px rgba(255,116,108,0.2);
+}
 input::placeholder, textarea::placeholder { color: var(--gray); opacity: 0.6; }
 textarea { resize: vertical; min-height: 130px; }
 .form-msg {
   color: var(--orange);
   font-size: 0.85rem;
   display: none;
+}
+.form-msg.success {
+  color: var(--orange);
+}
+.form-msg.error {
+  color: #ff746c;
 }
 .form-submit {
   background: linear-gradient(135deg, var(--orange), var(--amber)); 

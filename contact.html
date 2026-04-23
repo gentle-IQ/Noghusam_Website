@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Noghusam Tech Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="images/logo.jpeg" alt="Noghusam Logo">Noghusam<span>.</span></a>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme" aria-pressed="false"><span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-icon theme-toggle-icon-moon">☾</span><span class="theme-toggle-icon theme-toggle-icon-sun">☀</span><span class="theme-toggle-thumb"></span></span><span class="sr-only theme-toggle-state">Dark mode</span></button>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <ul class="nav-links" id="navMenu">
+    <li><a href="about.html">About</a></li><li><a href="staff.html">Our Staff</a></li><li><a href="inventions.html">Our Inventions</a></li><li><a href="services.html">Services</a></li><li><a href="goals.html">Our Goals</a></li><li><a href="why-us.html">Why Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+<section id="contact">
+  <div class="contact-wrap">
+    <div class="reveal">
+      <div class="section-tag">Reach Us</div>
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="divider"></div>
+      <p class="contact-intro">Ready to bring your project to life? Contact our team for a free consultation and quote.</p>
+      <div class="contact-detail"><div class="contact-icon">📍</div><div><div class="contact-label">Location</div><div class="contact-value">New Winneba, Ghana</div></div></div>
+      <div class="contact-detail"><div class="contact-icon">📞</div><div><div class="contact-label">Phone</div><div class="contact-value">054 816 2524 | 054 857 2941</div></div></div>
+      <div class="contact-detail"><div class="contact-icon">🏭</div><div><div class="contact-label">Business Type</div><div class="contact-value">Metal Fabrication &amp; Manufacturing</div></div></div>
+      <div class="contact-detail"><div class="contact-icon">⏰</div><div><div class="contact-label">Workshop Hours</div><div class="contact-value">Mon - Sat: 7:00 AM - 6:00 PM</div></div></div>
+    </div>
+    <div class="reveal">
+      <div class="contact-form">
+        <div class="form-row"><input type="text" placeholder="Full Name" /><input type="tel" placeholder="Phone Number" /></div>
+        <input type="email" placeholder="Email Address" />
+        <select aria-label="Select Service" title="Select Service">
+          <option value="" disabled selected>Select Service</option>
+          <option>Agricultural Machinery</option>
+          <option>Cocoa Pod Breaking Machine</option>
+          <option>Metal Sculpture & Art</option>
+          <option>Metal Furniture</option>
+          <option>General Metal Works</option>
+          <option>Other</option>
+        </select>
+        <textarea placeholder="Describe your project or inquiry..."></textarea>
+        <button class="form-submit" onclick="handleSubmit(event)">Send Message →</button>
+        <p id="form-msg" class="form-msg">✓ Message sent! We'll be in touch soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-top"><div class="footer-brand"><div class="footer-logo">Noghusam<span> Tech Hub</span></div><div class="footer-tagline">Metal Fabrication &amp; Engineering - New Winneba, Ghana</div></div><div class="footer-nav"><div class="footer-nav-col"><div class="footer-nav-label">Navigate</div><a href="about.html">About</a><a href="staff.html">Our Staff</a><a href="inventions.html">Our Inventions</a><a href="services.html">Services</a><a href="goals.html">Objectives</a><a href="why-us.html">Why Us</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div></div><div class="footer-social-block"><div class="footer-nav-label">Follow Us</div><div class="footer-social-links"><a href="https://www.facebook.com/cwmcl" target="_blank" rel="noopener" class="social-link">Facebook</a><a href="https://instagram.com/noghusam_tech_hub" target="_blank" rel="noopener" class="social-link">Instagram</a><a href="https://tiktok.com/@noghusam_tech_hub" target="_blank" rel="noopener" class="social-link">TikTok</a></div><div class="footer-handle">@noghusam_tech_hub</div></div></div>
+  <div class="footer-bottom"><div class="footer-copy">© 2026 Noghusam Tech Hub. All rights reserved.</div></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

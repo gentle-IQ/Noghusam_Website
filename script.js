@@ -147,6 +147,73 @@ reveals.forEach(r => observer.observe(r));
 function handleSubmit(e) {
   e.preventDefault();
   const msg = document.getElementById('form-msg');
+  const contactSection = document.getElementById('contact');
+  if (!msg || !contactSection) return;
+
+  const fullNameInput = contactSection.querySelector('input[type="text"]');
+  const phoneInput = contactSection.querySelector('input[type="tel"]');
+  const emailInput = contactSection.querySelector('input[type="email"]');
+  const serviceSelect = contactSection.querySelector('select');
+  const messageInput = contactSection.querySelector('textarea');
+  const fields = [fullNameInput, phoneInput, emailInput, serviceSelect, messageInput].filter(Boolean);
+
+  function clearErrorState() {
+    fields.forEach(field => field.classList.remove('input-invalid'));
+  }
+
+  function bindFieldValidation() {
+    fields.forEach(field => {
+      if (field.dataset.validationBound === 'true') return;
+      const eventName = field.tagName === 'SELECT' ? 'change' : 'input';
+      field.addEventListener(eventName, () => {
+        if (field === emailInput) {
+          const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim());
+          if (emailInput.value.trim() && validEmail) {
+            emailInput.classList.remove('input-invalid');
+          }
+        } else if (field.value.trim()) {
+          field.classList.remove('input-invalid');
+        }
+
+        if (msg.classList.contains('error')) {
+          msg.style.display = 'none';
+        }
+      });
+      field.dataset.validationBound = 'true';
+    });
+  }
+
+  bindFieldValidation();
+  clearErrorState();
+
+  const hasRequiredValues =
+    fullNameInput && fullNameInput.value.trim() &&
+    phoneInput && phoneInput.value.trim() &&
+    emailInput && emailInput.value.trim() &&
+    serviceSelect && serviceSelect.value &&
+    messageInput && messageInput.value.trim();
+
+  const emailLooksValid = emailInput && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim());
+
+  if (!hasRequiredValues || !emailLooksValid) {
+    if (!fullNameInput.value.trim()) fullNameInput.classList.add('input-invalid');
+    if (!phoneInput.value.trim()) phoneInput.classList.add('input-invalid');
+    if (!emailInput.value.trim() || !emailLooksValid) emailInput.classList.add('input-invalid');
+    if (!serviceSelect.value) serviceSelect.classList.add('input-invalid');
+    if (!messageInput.value.trim()) messageInput.classList.add('input-invalid');
+
+    msg.textContent = 'Please complete all fields with a valid email before sending.';
+    msg.classList.remove('success');
+    msg.classList.add('error');
+    msg.style.display = 'block';
+    const firstInvalid = contactSection.querySelector('.input-invalid');
+    if (firstInvalid) firstInvalid.focus();
+    return;
+  }
+
+  msg.textContent = "✓ Message sent! We'll be in touch soon.";
+  msg.classList.remove('error');
+  msg.classList.add('success');
   msg.style.display = 'block';
   setTimeout(() => { msg.style.display = 'none'; }, 4000);
 }
